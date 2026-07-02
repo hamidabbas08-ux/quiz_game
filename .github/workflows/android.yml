@@ -27,3 +27,9 @@ jobs:
 
     - name: Build Android App Bundle (AAB)
       run: flutter build appbundle --release
+
+    - name: Upload Artifact (Download Option)
+      uses: actions/upload-artifact@v4
+      with:
+        name: quiz-game-release-aab
+        path: build/app/outputs/bundle/release/app-release.aab
